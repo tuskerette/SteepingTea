@@ -1,4 +1,9 @@
 <h1>hello</h1>
-<% @songs.each do |song| %>
-  <p><%= song.url %></p>
-<% end %>
+<ul>
+  <% @songs.each do |song| %>
+    <li>
+      <%= link_to song.url, song.url%>
+      <%= song.length %> seconds
+    </li>
+  <% end %>
+</ul>
