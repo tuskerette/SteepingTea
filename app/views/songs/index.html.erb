@@ -4,6 +4,9 @@
     <li>
       <%= link_to song.url, song.url%>
       <%= song.length %> seconds
+      <%= link_to "Delete song", song_path(song), method: :delete %>
     </li>
   <% end %>
 </ul>
+
+<%= link_to "Add new song", new_song_path %>

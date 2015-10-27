@@ -10,7 +10,12 @@ class SongsController < ApplicationController
 
   def create
     @song = Song.create(songs_params)
-    # add if save...
+    redirect_to action: :index
+  end
+
+  def destroy
+    @song = Song.find(params[:id])
+    @song.destroy
     redirect_to action: :index
   end
 
