@@ -13,6 +13,16 @@ class SongsController < ApplicationController
     redirect_to action: :index
   end
 
+  def edit
+    @song = Song.find(params[:id])
+  end
+
+  def update
+    @song = Song.find(params[:id])
+    @song.update_attributes(songs_params)
+    redirect_to action: :index
+  end
+
   def destroy
     @song = Song.find(params[:id])
     @song.destroy
