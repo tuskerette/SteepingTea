@@ -1,0 +1,7 @@
+<%= form_for @song do |f| %>
+  <%= f.label :url %>
+  <%= f.text_field :url %>
+  <%= f.submit %>
+<% end %>
+
+<%= link_to "Back to all songs", songs_path %>
