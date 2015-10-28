@@ -8,4 +8,6 @@
   <%= f.submit %>
 <% end %>
 
-<%= link_to "Back to all songs", songs_path %>
+<%= link_to songs_path, class: 'btn btn-info' do %>
+  <i class="glyphicon glyphicon-music"></i> Back to all songs
+<% end %>

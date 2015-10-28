@@ -1,7 +1,7 @@
 <h2>one song</h2>
 
 <p><%= link_to @song.url, @song.url %></p>
-<div class="embed-container">
+<div>
   <%= embed(@song.url) %>
 </div>
 <p><%= @song.length %> seconds</p>
