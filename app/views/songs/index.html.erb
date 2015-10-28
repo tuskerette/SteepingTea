@@ -14,4 +14,6 @@
   <% end %>
 </ul>
 
-<%= link_to "Add new song", new_song_path %>
+<%= link_to new_song_path, class: 'btn btn-info' do %>
+  <i class="glyphicon glyphicon-plus"></i> Add new song
+<% end %>

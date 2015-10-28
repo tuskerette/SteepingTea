@@ -7,4 +7,6 @@
 <p><%= @song.length %> seconds</p>
 <p>Comment: <%= @song.comment %></p>
 
-<p><%= link_to "back to all songs", songs_path %></p>
+<%= link_to songs_path, class: 'btn btn-info' do %>
+  <i class="glyphicon glyphicon-music"></i> Back to all songs
+<% end %>
