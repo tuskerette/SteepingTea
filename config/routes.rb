@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   root 'songs#index'
   # resources :songs, only: :new
   # resources :songs, except: [:new, :edit]
