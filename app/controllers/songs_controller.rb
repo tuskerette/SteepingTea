@@ -13,7 +13,8 @@ class SongsController < ApplicationController
   end
 
   def create
-    @song = Song.new(songs_params)
+    # @song = Song.new(songs_params)
+    @song = Song.get_duration(params[:song][:url], params[:song][:comment])
     if @song.save
       redirect_to action: :index
     else
