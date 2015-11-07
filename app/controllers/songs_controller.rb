@@ -13,7 +13,6 @@ class SongsController < ApplicationController
   end
 
   def create
-    # @song = Song.new(songs_params)
     @song = Song.new(songs_params)
     @song.set_duration
     if @song.save
