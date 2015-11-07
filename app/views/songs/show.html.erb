@@ -4,7 +4,7 @@
 <div>
   <%= embed(@song.url) %>
 </div>
-<p><%= @song.length %> seconds</p>
+<p><%= @song.duration %> seconds</p>
 <p>Comment: <%= @song.comment %></p>
 
 <%= link_to songs_path, class: 'btn btn-info' do %>

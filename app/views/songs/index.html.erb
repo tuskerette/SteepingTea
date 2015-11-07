@@ -4,11 +4,12 @@
     <li>
       URL: <%= link_to song.url, song.url%><br />
       <%= embed(song.url) %><br />
-      LENGTH: <%= song.length %> seconds <br />
+      LENGTH: <%= song.duration %> seconds <br />
       COMMENT: <%= song.comment %> <br />
       <%= link_to "Show song", song_path(song), class: 'btn btn-success' %><br />
       <%= link_to "Edit song", edit_song_path(song), class: 'btn btn-info' %><br />
       <%= link_to "Delete song", song_path(song), method: :delete, class: 'btn btn-warning' %>
+      <%= song.category %>
     </li>
     <br />
   <% end %>

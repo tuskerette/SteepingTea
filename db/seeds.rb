@@ -6,7 +6,7 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 Song.destroy_all
-Song.create(url: "https://www.youtube.com/watch?v=suQBZzcO0TQ", comment:"cool", length: 191)
-Song.create(url: "https://www.youtube.com/watch?v=xTo79sPCVXA", comment:"nice", length: 177)
-Song.create(url: "https://www.youtube.com/watch?v=YrL26-U4cCg", comment:"short", length: 72)
+Song.create(url: "https://www.youtube.com/watch?v=suQBZzcO0TQ", comment:"cool", duration: 191)
+Song.create(url: "https://www.youtube.com/watch?v=xTo79sPCVXA", comment:"nice", duration: 177)
+Song.create(url: "https://www.youtube.com/watch?v=YrL26-U4cCg", comment:"short", duration: 72)
 puts "created three songs"
