@@ -1,4 +1,5 @@
 class Song < ActiveRecord::Base
+
   scope :white_tea, -> { where("duration < ?", 60) }
   scope :green_tea, -> { where("duration < ?", 180) }
   scope :black_tea, -> { where("duration < ?", 300) }

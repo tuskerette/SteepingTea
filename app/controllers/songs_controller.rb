@@ -2,7 +2,15 @@ class SongsController < ApplicationController
   before_action :find_song, only: [:show, :edit, :update, :destroy]
 
   def index
-    @songs = Song.order(created_at: :desc)
+    @songs = Song.all
+    # @songs = Song.order(created_at: :desc)
+
+    # if params[:white_tea]
+    #   @songs = Song.where(:white_tea => params[:white_tea])
+    #   flash[:notice] = "There are no songs in this category".html_safe
+    # else
+    #   @songs = Song.all
+    # end
   end
 
   def show
