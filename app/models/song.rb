@@ -3,8 +3,8 @@ class Song < ActiveRecord::Base
   scope :white_tea, -> { where("duration < ?", 60) }
   scope :green_tea, -> { where("duration < ?", 180) }
   scope :black_tea, -> { where("duration < ?", 300) }
-  scope :roiboos, -> { where("duration < ?", 420) }
-  scope :herbal_tea, -> { where("duration > ?", 600) }
+  scope :roiboos_tea, -> { where("duration < ?", 420) }
+  scope :herbal_tea, -> { where("duration > ?", 420) }
 
   def set_duration
     video = Yt::Video.new url: self.url
