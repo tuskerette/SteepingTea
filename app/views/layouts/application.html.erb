@@ -8,19 +8,20 @@
 </head>
 <body>
 
+
   <div id="main-container" class="container">
   <p class="navbar-text pull-right">
     <% if user_signed_in? %>
       Logged in as <strong><%= current_user.email %></strong>
-      <%= link_to edit_user_registration_path, :class => 'navbar-link btn btn-info' do %>
-        <i class="glyphicon glyphicon-pencil"></i> Edit Profile
+      <%= link_to edit_user_registration_path do %>
+        Edit Profile
       <% end %>
-      <%= link_to destroy_user_session_path, method: :delete, :class => 'navbar-link btn btn-warning' do  %>
-        <i class="glyphicon glyphicon-log-out"></i> Logout
+      <%= link_to destroy_user_session_path, method: :delete do  %>
+        Logout
       <% end %>
     <% else %>
-      <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
-      <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
+      <%= link_to "Sign up", new_user_registration_path  %> |
+      <%= link_to "Login", new_user_session_path %>
     <% end %>
       <div class="row">
         <div class="col-xs-12">

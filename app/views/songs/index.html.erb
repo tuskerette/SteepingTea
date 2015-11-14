@@ -8,17 +8,19 @@
   <%= link_to "Roiboos Tea", songs_path(:roiboos_tea=>"roiboos_tea") %>
   <%= link_to "Herbal Tea", songs_path(:herbal_tea=>"herbal_tea") %>
 
+<% if flash[:notice] %>
+    <div class="notice"><%= flash[:notice] %></div>
+<% end %>
+
 <ul>
   <% @songs.each do |song| %>
     <li>
       URL: <%= link_to song.url, song.url%><br />
       <%= embed(song.url) %><br />
-      <!-- LENGTH: <%= song.duration %> seconds <br /> -->
       COMMENT: <%= song.comment %> <br />
       <%= link_to "Show song", song_path(song) %><br />
       <%= link_to "Edit song", edit_song_path(song) %><br />
       <%= link_to "Delete song", song_path(song), method: :delete %>
-      <p><%= song.category %></p>
     </li>
     <br />
   <% end %>

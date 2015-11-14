@@ -1,9 +1,9 @@
 class Song < ActiveRecord::Base
 
   scope :white_tea, -> { where("duration < ?", 60) }
-  scope :green_tea, -> { where("duration < ?", 180) }
-  scope :black_tea, -> { where("duration < ?", 300) }
-  scope :roiboos_tea, -> { where("duration < ?", 420) }
+  scope :green_tea, -> { where("duration > ? and duration < ?", 60, 180)}
+  scope :black_tea, -> { where("duration > ? and duration < ?", 180, 300) }
+  scope :roiboos_tea, -> { where("duration > ? and duration < ?", 300, 420) }
   scope :herbal_tea, -> { where("duration > ?", 420) }
 
   def set_duration
@@ -12,20 +12,18 @@ class Song < ActiveRecord::Base
   end
 
 
-  def category
-    if duration < 60
-      "White Tea"
-    elsif duration < 180
-      "Green Tea"
-    elsif duration < 300
-      "Black Tea"
-    elsif duration < 420
-      "Roiboos"
-    elsif duration > 420
-      "Herbal Tea"
-    end
-
-
-  end
+  # def category
+  #   if duration < 60
+  #     "White Tea"
+  #   elsif duration > 60 && duration < 180
+  #     "Green Tea"
+  #   elsif duration > 180 && duration < 300
+  #     "Black Tea"
+  #   elsif duration > 300 && duration < 420
+  #     "Roiboos"
+  #   elsif duration > 420
+  #     "Herbal Tea"
+  #   end
+  # end
 
 end
