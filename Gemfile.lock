@@ -193,6 +193,7 @@ DEPENDENCIES
   bourbon
   coffee-rails (~> 4.1.0)
   devise (~> 3.4.0)
+  haml
   haml-rails
   jbuilder (~> 2.0)
   jquery-rails

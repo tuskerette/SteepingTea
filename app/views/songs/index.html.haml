@@ -1,0 +1,25 @@
+%h2 Add a new Song
+= link_to "Add new song", new_song_path
+%h2 Find Song by Category
+= link_to "White Tea", songs_path(:white_tea=>"white_tea")
+= link_to "Green Tea", songs_path(:green_tea=>"green_tea")
+= link_to "Black Tea", songs_path(:black_tea=>"black_tea")
+= link_to "Roiboos Tea", songs_path(:roiboos_tea=>"roiboos_tea")
+= link_to "Herbal Tea", songs_path(:herbal_tea=>"herbal_tea")
+- if flash[:notice]
+  .notice= flash[:notice]
+%ul
+  - @songs.each do |song|
+    %li
+      = embed(song.url)
+      %br/
+      COMMENT: #{song.comment}
+      %br/
+      = link_to "Show song", song_path(song)
+      %br/
+      = link_to "Edit song", edit_song_path(song)
+      %br/
+      = link_to "Delete song", song_path(song), method: :delete
+    %br/
+
+

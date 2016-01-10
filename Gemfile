@@ -29,6 +29,7 @@ gem 'yt', '~> 0.13.7'
 
 gem 'bourbon'
 gem 'neat'
+gem 'haml'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
