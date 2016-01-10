@@ -1,0 +1,7 @@
+.content {
+  @include outer-container;
+}
+
+li.block {
+  @include span-columns(3);
+}
