@@ -9,7 +9,7 @@
 %p= link_to "Add a song", new_song_path
 %ul
   - @songs.each do |song|
-    %li
+    %li.block
       = embed(song.url)
       %br/
       Comment: #{song.comment}
