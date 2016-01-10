@@ -15,7 +15,7 @@
 <ul>
   <% @songs.each do |song| %>
     <li>
-      URL: <%= link_to song.url, song.url%><br />
+      <!-- URL: <%= link_to song.url, song.url%><br /> -->
       <%= embed(song.url) %><br />
       COMMENT: <%= song.comment %> <br />
       <%= link_to "Show song", song_path(song) %><br />

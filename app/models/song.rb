@@ -10,20 +10,4 @@ class Song < ActiveRecord::Base
     video = Yt::Video.new url: self.url
     self.duration = video.duration
   end
-
-
-  # def category
-  #   if duration < 60
-  #     "White Tea"
-  #   elsif duration > 60 && duration < 180
-  #     "Green Tea"
-  #   elsif duration > 180 && duration < 300
-  #     "Black Tea"
-  #   elsif duration > 300 && duration < 420
-  #     "Roiboos"
-  #   elsif duration > 420
-  #     "Herbal Tea"
-  #   end
-  # end
-
 end
