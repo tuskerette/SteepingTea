@@ -1,16 +1,40 @@
+// Colors
+$corn-flower-blue: #6495ED;
+$powder-blue: #B0E0E6;
+$teal: #008080;
+$medium-sea-green: #3CB371;
+$sea-green: #2E8B57;
+$dark-slate-gray: #2F4F4F;
+$antique-white: #FAEBD7;
+
+
 html {
   min-height: 100%;
   position: relative;
 }
 
 body {
+  background-color: $antique-white;
   margin-bottom: 60px;
 }
+
+a,
+a:hover,
+a:visited {
+  color: $corn-flower-blue;
+}
+
+
+.navbar.navbar-default {
+  background-color: $powder-blue;
+}
+
+
 .footer {
-  background-color: #A2EFC6;
+  background-color: $powder-blue;
   bottom: 0;
   height: 50px;
-  padding-top: 10px;
+  padding-top: 15px;
   position: absolute;
   text-align: center;
   width: 100%;
