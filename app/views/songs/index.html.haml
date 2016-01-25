@@ -1,21 +1,23 @@
-.content
-  %h2 What type of tea are you making?
-  = link_to "White Tea", songs_path(:white_tea=>"white_tea")
-  = link_to "Green Tea", songs_path(:green_tea=>"green_tea")
-  = link_to "Black Tea", songs_path(:black_tea=>"black_tea")
-  = link_to "Roiboos Tea", songs_path(:roiboos_tea=>"roiboos_tea")
-  = link_to "Herbal Tea", songs_path(:herbal_tea=>"herbal_tea")
-  - if flash[:notice]
-    .notice= flash[:notice]
-  %p= link_to "Add a song", new_song_path
-  %ul
-    - @songs.each do |song|
-      %li.block
-        = embed(song.url)
-        %br/
-        Comment: #{song.comment}
-        %br/
-        = link_to 'Edit', edit_song_path(song)
-        = link_to 'Delete', song_path(song), method: :delete, data: {confirm: "Are you sure?"}
+.container-fluid
+  .row
+    %h2 What type of tea are you making?
+    = link_to "White Tea", songs_path(:white_tea=>"white_tea")
+    = link_to "Green Tea", songs_path(:green_tea=>"green_tea")
+    = link_to "Black Tea", songs_path(:black_tea=>"black_tea")
+    = link_to "Roiboos Tea", songs_path(:roiboos_tea=>"roiboos_tea")
+    = link_to "Herbal Tea", songs_path(:herbal_tea=>"herbal_tea")
+    - if flash[:notice]
+      .notice= flash[:notice]
+    %p= link_to "Add a song", new_song_path
+    %ul
+      - @songs.each do |song|
+        .col-xs-12
+          %li
+            = embed(song.url)
+            %br/
+            Comment: #{song.comment}
+            %br/
+            = link_to 'Edit', edit_song_path(song)
+            = link_to 'Delete', song_path(song), method: :delete, data: {confirm: "Are you sure?"}
 
 

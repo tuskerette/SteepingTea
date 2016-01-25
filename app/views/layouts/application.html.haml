@@ -6,21 +6,38 @@
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
   %body
-    #main-container.container
-      %p.navbar-text.pull-right
-        - if user_signed_in?
-          Logged in as
-          %strong= current_user.email
-          = link_to edit_user_registration_path do
-            Edit Profile
-          = link_to destroy_user_session_path, method: :delete do
-            Logout
-        - else
-          = link_to "Sign up", new_user_registration_path
-          |
-          \#{link_to "Login", new_user_session_path}
-      .row
-        .col-xs-12
-          %h1= link_to "Steeping Tea", songs_path
-        .col-xs-12
-          = yield
+    %nav.navbar.navbar-default
+      .container-fluid
+        .navbar-header
+          %button.navbar-toggle.collapsed{"aria-expanded" => "false", "data-target" => "#bs-example-navbar-collapse-1", "data-toggle" => "collapse", :type => "button"}
+            %span.sr-only Toggle navigation
+            %span.icon-bar
+            %span.icon-bar
+            %span.icon-bar
+          =link_to "Steeping Tea", songs_path, class: 'navbar-brand'
+        / Collect the nav links, forms, and other content for toggling
+        #bs-example-navbar-collapse-1.collapse.navbar-collapse
+          %ul.nav.navbar-nav.navbar-right
+            - if user_signed_in?
+              %li
+                =link_to current_user.email.upcase, songs_path, class: 'active'
+              %li.dropdown
+                %a.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"}
+                  Menu
+                  %span.caret
+                %ul.dropdown-menu
+                  %li
+                    =link_to edit_user_registration_path do
+                      Edit Profile
+                  %li
+                    =link_to destroy_user_session_path, method: :delete do
+                      Logout
+            - else
+              %li
+                =link_to "Sign up", new_user_registration_path
+              %li
+                =link_to "Login", new_user_session_path
+    .row
+      .col-xs-12
+        = yield
+

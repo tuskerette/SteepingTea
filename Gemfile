@@ -23,8 +23,6 @@ gem 'devise', '~> 3.4.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'yt', '~> 0.13.7'
-gem 'bourbon'
-gem 'neat'
 gem 'haml'
 
 # Use ActiveModel has_secure_password
