@@ -6,8 +6,8 @@
     =javascript_include_tag 'application', 'data-turbolinks-track' => true
     =csrf_meta_tags
   %body
-    =render "navbar"
+    =render "shared/navbar"
     .row
       .col-xs-12
         =yield
-    =render "footer"
+    =render "shared/footer"

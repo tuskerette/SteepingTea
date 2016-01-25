@@ -1,8 +1,16 @@
-= form_for @song do |f|
-  = f.label :url
-  = f.text_field :url
-  = f.label :comment
-  = f.text_field :comment
-  = f.submit
-= link_to songs_path, class: 'btn' do
-  Back to all songs
+.container
+  .row
+    =form_for @song do |f|
+      .col-md-12
+        =f.label :url
+        =f.text_field :url
+      .col-md-12
+        =f.label :comment
+        =f.text_field :comment
+      .col-md-12
+        =f.submit
+  .row
+    .col-md-12.back
+      =link_to songs_path, class: 'btn btn-default' do
+        %i.fa.fa-star
+        Back to all songs
