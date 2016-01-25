@@ -1,20 +1,21 @@
-.container-fluid
+.container
   .row
-    .col-xs-12
+    .col-md-12.col-xs-8
       %h2 What type of tea are you making?
-      =link_to "White Tea", songs_path(:white_tea=>"white_tea")
-      |
-      =link_to "Green Tea", songs_path(:green_tea=>"green_tea")
-      |
-      =link_to "Black Tea", songs_path(:black_tea=>"black_tea")
-      |
-      =link_to "Roiboos Tea", songs_path(:roiboos_tea=>"roiboos_tea")
-      |
-      =link_to "Herbal Tea", songs_path(:herbal_tea=>"herbal_tea")
-      - if flash[:notice]
-        .notice= flash[:notice]
+      %h3
+        =link_to "White Tea", songs_path(:white_tea=>"white_tea")
+        |
+        =link_to "Green Tea", songs_path(:green_tea=>"green_tea")
+        |
+        =link_to "Black Tea", songs_path(:black_tea=>"black_tea")
+        |
+        =link_to "Roiboos Tea", songs_path(:roiboos_tea=>"roiboos_tea")
+        |
+        =link_to "Herbal Tea", songs_path(:herbal_tea=>"herbal_tea")
+        - if flash[:notice]
+          .notice= flash[:notice]
   .row
-    .col-xs-12
+    .col-md-6
       %hr
       %button.btn.btn-default
         %i.fa.fa-plus
@@ -22,8 +23,8 @@
       %hr
   .row
     - @songs.each do |song|
-      .col-xs-12.col-md-4
-        =embed(song.url)
+      .col-md-6
+        =embed(song.url, 420, 315)
         %br
         My comment: #{song.comment}
         %br
