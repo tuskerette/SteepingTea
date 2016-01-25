@@ -20,7 +20,9 @@
           %ul.nav.navbar-nav.navbar-right
             - if user_signed_in?
               %li
-                =link_to current_user.email.upcase, songs_path, class: 'active'
+                =link_to "Add a song", new_song_path
+              %li
+                =link_to current_user.email, songs_path, class: 'active'
               %li.dropdown
                 %a.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"}
                   Menu
@@ -40,4 +42,3 @@
     .row
       .col-xs-12
         = yield
-
