@@ -27,6 +27,15 @@ a:visited {
 
 .navbar.navbar-default {
   background-color: $powder-blue;
+  border: 0;
+  height: 140px;
+}
+
+.navbar-nav {
+  a {
+    text-align: right;
+    color: $corn-flower-blue;
+  }
 }
 
 .back {

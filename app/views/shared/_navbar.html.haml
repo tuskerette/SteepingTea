@@ -6,26 +6,20 @@
         %span.icon-bar
         %span.icon-bar
         %span.icon-bar
-      =link_to "Steeping Tea", songs_path, class: 'navbar-brand'
-    / Collect the nav links, forms, and other content for toggling
+      =link_to image_tag('st_logo.png'), songs_path, class: 'navbar-brand'
     #collapse-nav.collapse.navbar-collapse
       %ul.nav.navbar-nav.navbar-right
         - if user_signed_in?
           %li
             =link_to "Logged in as #{current_user.email}", songs_path
-          %li.dropdown
-            %a.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"}
-              Menu
-              %span.caret
-            %ul.dropdown-menu
-              %li
-                =link_to "Add a song", new_song_path
-              %li
-                =link_to edit_user_registration_path do
-                  Edit Profile
-              %li
-                =link_to destroy_user_session_path, method: :delete do
-                  Logout
+          %li
+            =link_to "Add a song", new_song_path
+          %li
+            =link_to edit_user_registration_path do
+              Edit Profile
+          %li
+            =link_to destroy_user_session_path, method: :delete do
+              Logout
         - else
           %li
             =link_to "Sign up", new_user_registration_path
