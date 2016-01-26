@@ -1,6 +1,6 @@
 .container
   .row
-    .col-md-12.col-xs-8
+    .col-md-8.col-xs-8
       %h2 What type of tea are you making?
       %h3
         =link_to "White Tea", songs_path(:white_tea=>"white_tea")
@@ -14,22 +14,23 @@
         =link_to "Herbal Tea", songs_path(:herbal_tea=>"herbal_tea")
         - if flash[:notice]
           .notice= flash[:notice]
-  .row
-    .col-md-6
-      %hr
+    .col-md-4.add-song
       %button.btn.btn-default
         %i.fa.fa-plus
         =link_to "Add a song", new_song_path
-      %hr
   .row
     - @songs.each do |song|
-      .col-md-6
+      .col-md-6.songs
         =embed(song.url, 420, 315)
         %br
-        My comment: #{song.comment}
+        What I was thinking when I added this song: #{song.comment}
         %br
         Actions:
         =link_to 'Edit', edit_song_path(song)
         |
         =link_to 'Delete', song_path(song), method: :delete, data: {confirm: "Are you sure?"}
-        %hr
+  .row
+    .col-md-6.add-song
+      %button.btn.btn-default
+        %i.fa.fa-plus
+        =link_to "Add a song", new_song_path

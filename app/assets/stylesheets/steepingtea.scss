@@ -6,6 +6,7 @@ $medium-sea-green: #3CB371;
 $sea-green: #2E8B57;
 $dark-slate-gray: #2F4F4F;
 $antique-white: #FAEBD7;
+$light-coral: #F08080;
 
 
 html {
@@ -63,4 +64,12 @@ input {
   position: absolute;
   text-align: center;
   width: 100%;
+}
+
+.add-song {
+  padding: 20px;
+}
+
+.songs {
+  padding-top: 20px;
 }
