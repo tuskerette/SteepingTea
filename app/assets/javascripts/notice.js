@@ -3,7 +3,7 @@
     $(this).hide();
   }
   $(function(){
-    $('.notice').on('click', hideNotice);
+    $('.notice').on('click tap', hideNotice);
   });
 
 })(window.jQuery, window, document);

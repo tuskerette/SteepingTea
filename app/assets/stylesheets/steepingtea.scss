@@ -15,11 +15,13 @@ body {
   background-color: $antique-white;
   margin-bottom: 60px;
 }
-
-a,
-a:hover,
-a:visited {
-  color: $corn-flower-blue;
+.nav.navbar-nav {
+  a,
+  a:hover,
+  a:visited {
+    color: $powder-blue;
+    text-decoration: none;
+  }
 }
 
 h1,
@@ -28,6 +30,25 @@ h3,
 h4,
 h5 {
   font-family: 'Raleway', sans-serif;
+}
+
+label,
+input {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.2em;
+  margin: 10px;
+}
+
+button,
+.btn,
+.btn-default {
+  color: $corn-flower-blue;
+  a,
+  a:hover,
+  a:visited {
+    color: $corn-flower-blue;
+    text-decoration: none;
+  }
 }
 
 .navbar.navbar-default {
@@ -49,11 +70,6 @@ h5 {
 .back {
   margin-top: 10px;
   text-align: center;
-}
-
-label,
-input {
-  margin: 10px;
 }
 
 .notice {
