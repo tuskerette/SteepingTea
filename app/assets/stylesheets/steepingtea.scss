@@ -1,9 +1,6 @@
 // Colors
 $corn-flower-blue: #6495ED;
 $powder-blue: #B0E0E6;
-$teal: #008080;
-$medium-sea-green: #3CB371;
-$sea-green: #2E8B57;
 $dark-slate-gray: #2F4F4F;
 $antique-white: #FAEBD7;
 $light-coral: #F08080;
@@ -27,7 +24,9 @@ a:visited {
 
 h1,
 h2,
-h3 {
+h3,
+h4,
+h5 {
   font-family: 'Raleway', sans-serif;
 }
 
@@ -42,6 +41,7 @@ h3 {
 .navbar-nav {
   li > a {
     color: $corn-flower-blue !important;
+    font-size: 1.2em;
     margin-top: 20px;
   }
 }
@@ -58,7 +58,8 @@ input {
 
 .notice {
   background-color: $light-coral;
-  color: $corn-flower-blue;
+  color: $dark-slate-gray;
+  font-size: 1.2em;
   padding: 20px;
   border-radius: 10px;
 }
