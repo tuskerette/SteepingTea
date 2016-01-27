@@ -34,15 +34,20 @@ h5 {
 
 label,
 input {
-  font-family: 'Raleway', sans-serif;
   font-size: 1.2em;
   margin: 10px;
+  width: 200px;
+}
+
+input[type='submit'] {
+  color: $corn-flower-blue;
 }
 
 button,
 .btn,
 .btn-default {
   color: $corn-flower-blue;
+  font-size: 1.2em;
   a,
   a:hover,
   a:visited {
@@ -67,7 +72,7 @@ button,
   }
 }
 
-.back {
+.back-to-all-songs {
   margin-top: 10px;
   text-align: center;
 }

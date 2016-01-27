@@ -25,7 +25,7 @@
       .col-md-6.songs
         =embed(song.url, 420, 315)
         %br
-        What I was thinking when I added this song: #{song.comment}
+        Notes: #{song.comment}
         %br
         Actions:
         =link_to 'Edit', edit_song_path(song)
