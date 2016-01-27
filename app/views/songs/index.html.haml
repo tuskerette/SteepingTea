@@ -12,8 +12,10 @@
         =link_to "Roiboos Tea", songs_path(:roiboos_tea=>"roiboos_tea")
         |
         =link_to "Herbal Tea", songs_path(:herbal_tea=>"herbal_tea")
+      %h2
         - if flash[:notice]
-          .notice= flash[:notice]
+          .notice=flash[:notice]
+
     .col-md-4.add-song
       %button.btn.btn-default
         %i.fa.fa-plus

@@ -56,6 +56,21 @@ input {
   margin: 10px;
 }
 
+.notice {
+  background-color: $light-coral;
+  color: $corn-flower-blue;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.add-song {
+  padding: 20px;
+}
+
+.songs {
+  padding-top: 20px;
+}
+
 .footer {
   background-color: $powder-blue;
   bottom: 0;
@@ -66,10 +81,3 @@ input {
   width: 100%;
 }
 
-.add-song {
-  padding: 20px;
-}
-
-.songs {
-  padding-top: 20px;
-}
