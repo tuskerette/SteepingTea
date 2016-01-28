@@ -35,12 +35,20 @@ h5 {
 label,
 input {
   font-size: 1.2em;
-  margin: 10px;
-  width: 200px;
+  margin: 10px 0;
 }
 
 input[type='submit'] {
   color: $corn-flower-blue;
+}
+
+input#song_url {
+  width: 300px;
+}
+
+label[for=song_url],
+label[for=song_comment] {
+  margin-right: 40px;
 }
 
 button,
@@ -73,8 +81,7 @@ button,
 }
 
 .back-to-all-songs {
-  margin-top: 10px;
-  text-align: center;
+  margin-top: 20px;
 }
 
 .notice {
@@ -103,3 +110,6 @@ button,
   width: 100%;
 }
 
+.actions {
+  padding: 20px 0;
+}

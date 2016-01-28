@@ -21,16 +21,18 @@
         %i.fa.fa-plus
         =link_to "Add a song", new_song_path
   .row
-    - @songs.each do |song|
-      .col-md-6.songs
-        =embed(song.url, 420, 315)
-        %br
-        Notes: #{song.comment}
-        %br
-        Actions:
-        =link_to 'Edit', edit_song_path(song)
-        |
-        =link_to 'Delete', song_path(song), method: :delete, data: {confirm: "Are you sure?"}
+    .col-md-12
+      %h2 All my songs
+      - @songs.each do |song|
+        .col-md-6.songs
+          =embed(song.url, 420, 315)
+          %br
+          Notes: #{song.comment}
+          %br
+          Actions:
+          =link_to 'Edit', edit_song_path(song)
+          |
+          =link_to 'Delete', song_path(song), method: :delete, data: {confirm: "Are you sure?"}
   .row
     .col-md-6.add-song
       %button.btn.btn-default
