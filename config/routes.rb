@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
   devise_for :users
-  root 'songs#index'
+  get 'user_root' => 'songs#index', as: :user_root
+
+  HighVoltage.configure do |config|
+    config.home_page = 'home'
+  end
+  # root 'songs#index'
   # resources :songs, only: :new
   # resources :songs, except: [:new, :edit]
   resources :songs, except: [:show]
