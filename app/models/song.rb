@@ -1,5 +1,5 @@
 class Song < ActiveRecord::Base
-  validates :url, :presence => true
+  validates :url, presence: true
 
   scope :white_tea, -> { where("duration > ? and duration < ?", 30, 60) }
   scope :green_tea, -> { where("duration > ? and duration < ?", 60, 180)}

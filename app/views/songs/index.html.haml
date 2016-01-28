@@ -2,16 +2,19 @@
   .row
     .col-md-8.col-xs-8
       %h2 What type of tea are you making?
-      %h3
-        =link_to "White Tea", songs_path(:white_tea=>"white_tea")
-        |
-        =link_to "Green Tea", songs_path(:green_tea=>"green_tea")
-        |
-        =link_to "Black Tea", songs_path(:black_tea=>"black_tea")
-        |
-        =link_to "Roiboos Tea", songs_path(:roiboos_tea=>"roiboos_tea")
-        |
-        =link_to "Herbal Tea", songs_path(:herbal_tea=>"herbal_tea")
+      %h4
+        %ul.nav.nav-tabs{:role => "tablist"}
+          %li{:role => "presentation"}
+            =link_to "White Tea", songs_path(:white_tea=>"white_tea"), {"aria-controls" => "whitetea", "data-toggle" => "tab", :role => "tab"}
+
+          %li{:role => "presentation"}
+            =link_to "Green Tea", songs_path(:green_tea=>"green_tea")
+          %li{:role => "presentation"}
+            =link_to "Black Tea", songs_path(:black_tea=>"black_tea")
+          %li{:role => "presentation"}
+            =link_to "Roiboos Tea", songs_path(:roiboos_tea=>"roiboos_tea")
+          %li{:role => "presentation"}
+            =link_to "Herbal Tea", songs_path(:herbal_tea=>"herbal_tea")
       %h4
         - if flash[:notice]
           .notice=flash[:notice]
