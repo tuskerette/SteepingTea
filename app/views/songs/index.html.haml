@@ -24,7 +24,7 @@
         =link_to "Add a song", new_song_path
   .row
     .col-md-12
-      %h2 All my songs
+      %h2 My songs
       - @songs.each do |song|
         .col-md-6.songs
           =embed(song.url, 420, 315)

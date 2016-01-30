@@ -1,5 +1,6 @@
 class Song < ActiveRecord::Base
-  # validates :url, presence: true
+  belongs_to :user
+
   validates :url, url: true
   before_create :set_duration
 
