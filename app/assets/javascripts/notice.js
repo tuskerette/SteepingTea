@@ -1,4 +1,5 @@
 (function ($, window, document) {
+  'use strict';
   var hideNotice = function(e) {
     $(this).hide();
   }
