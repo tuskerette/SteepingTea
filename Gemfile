@@ -26,7 +26,6 @@ gem 'yt', '~> 0.25.6'
 gem 'haml'
 
 gem "font-awesome-rails"
-
 gem "high_voltage"
 
 # Use ActiveModel has_secure_password

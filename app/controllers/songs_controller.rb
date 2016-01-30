@@ -46,7 +46,7 @@ class SongsController < ApplicationController
 
   def create
     @song = Song.new(songs_params)
-    @song.set_duration
+    # @song.set_duration
     if @song.save
       redirect_to action: :index
     else
