@@ -27,6 +27,7 @@ gem 'haml'
 
 gem "font-awesome-rails"
 gem "high_voltage"
+gem "validate_url"
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

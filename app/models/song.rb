@@ -1,5 +1,6 @@
 class Song < ActiveRecord::Base
-  validates :url, presence: true
+  # validates :url, presence: true
+  validates :url, url: true
   before_create :set_duration
 
   scope :white_tea, -> { where("duration > ? and duration < ?", 30, 60) }
