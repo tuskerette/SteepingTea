@@ -1,40 +1,47 @@
 class SongsController < ApplicationController
+  before_filter :authenticate_user!, except: [:index]
   before_action :find_song, only: [:show, :edit, :update, :destroy]
+  before_action :set_user
 
   def index
-    if params[:white_tea]
-      @songs = Song.white_tea
-      if @songs.empty?
-        flash[:notice] = "There are no songs in this category".html_safe
-        flash.discard
-      end
-    elsif params[:green_tea]
-      @songs = Song.green_tea
-      if @songs.empty?
-        flash[:notice] = "There are no songs in this category".html_safe
-        flash.discard
-      end
-    elsif params[:black_tea]
-      @songs = Song.black_tea
-      if @songs.empty?
-        flash[:notice] = "There are no songs in this category".html_safe
-        flash.discard
-      end
-    elsif params[:roiboos_tea]
-      @songs = Song.roiboos_tea
-      if @songs.empty?
-        flash[:notice] = "There are no songs in this category".html_safe
-        flash.discard
-      end
-    elsif params[:herbal_tea]
-      @songs = Song.herbal_tea
-      if @songs.empty?
-        flash[:notice] = "There are no songs in this category".html_safe
-        flash.discard
-      end
-    else
-      @songs = Song.order(created_at: :desc)
-    end
+    @songs = @user.songs
+
+
+
+
+    # if params[:white_tea]
+    #   @songs = Song.white_tea
+    #   if @songs.empty?
+    #     flash[:notice] = "There are no songs in this category".html_safe
+    #     flash.discard
+    #   end
+    # elsif params[:green_tea]
+    #   @songs = Song.green_tea
+    #   if @songs.empty?
+    #     flash[:notice] = "There are no songs in this category".html_safe
+    #     flash.discard
+    #   end
+    # elsif params[:black_tea]
+    #   @songs = Song.black_tea
+    #   if @songs.empty?
+    #     flash[:notice] = "There are no songs in this category".html_safe
+    #     flash.discard
+    #   end
+    # elsif params[:roiboos_tea]
+    #   @songs = Song.roiboos_tea
+    #   if @songs.empty?
+    #     flash[:notice] = "There are no songs in this category".html_safe
+    #     flash.discard
+    #   end
+    # elsif params[:herbal_tea]
+    #   @songs = Song.herbal_tea
+    #   if @songs.empty?
+    #     flash[:notice] = "There are no songs in this category".html_safe
+    #     flash.discard
+    #   end
+    # else
+      # @songs = Song.order(created_at: :desc)
+    # end
   end
 
   def show
@@ -45,7 +52,7 @@ class SongsController < ApplicationController
   end
 
   def create
-    @song = Song.new(songs_params)
+    @song = @user.songs.build(songs_params)
     if @song.save
       redirect_to action: :index
     else
@@ -76,6 +83,11 @@ class SongsController < ApplicationController
   end
 
   def songs_params
-    params.require(:song).permit(:url, :comment, :duration)
+    params.require(:song).permit(:url, :comment, :duration, :user_id)
+  end
+
+  def set_user
+    user_id = current_user.id
+    @user = User.find(user_id)
   end
 end
