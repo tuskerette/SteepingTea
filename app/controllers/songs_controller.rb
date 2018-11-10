@@ -24,12 +24,6 @@ class SongsController < ApplicationController
         flash[:notice] = "There are no songs in this category".html_safe
         flash.discard
       end
-    elsif params[:roiboos_tea]
-      @songs = @user.songs.roiboos_tea
-      if @songs.empty?
-        flash[:notice] = "There are no songs in this category".html_safe
-        flash.discard
-      end
     elsif params[:herbal_tea]
       @songs = @user.songs.herbal_tea
       if @songs.empty?

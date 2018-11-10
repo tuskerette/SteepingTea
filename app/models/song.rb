@@ -7,7 +7,6 @@ class Song < ActiveRecord::Base
   scope :white_tea, -> { where("duration > ? and duration < ?", 30, 90)}
   scope :green_tea, -> { where("duration > ? and duration < ?", 90, 180)}
   scope :black_tea, -> { where("duration > ? and duration < ?", 180, 300) }
-  scope :roiboos_tea, -> { where("duration > ? and duration < ?", 300, 420) }
   scope :herbal_tea, -> { where("duration > ?", 420) }
 
   def set_duration
