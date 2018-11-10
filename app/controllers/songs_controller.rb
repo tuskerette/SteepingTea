@@ -79,7 +79,7 @@ class SongsController < ApplicationController
   end
 
   def songs_params
-    params.require(:song).permit(:url, :comment, :duration, :user_id)
+    params.require(:song).permit(:url, :comment, :duration, :user_id, :authenticity_token)
   end
 
   def set_user
