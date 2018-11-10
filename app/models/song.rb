@@ -5,9 +5,9 @@ class Song < ActiveRecord::Base
   before_create :set_duration
 
   scope :white_tea, -> { where("duration > ? and duration < ?", 30, 90)}
-  scope :green_tea, -> { where("duration > ? and duration < ?", 90, 180)}
-  scope :black_tea, -> { where("duration > ? and duration < ?", 180, 300) }
-  scope :herbal_tea, -> { where("duration > ?", 420) }
+  scope :green_tea, -> { where("duration > ? and duration < ?", 91, 180)}
+  scope :black_tea, -> { where("duration > ? and duration < ?", 181, 300) }
+  scope :herbal_tea, -> { where("duration > ?", 301) }
 
   def set_duration
     video = Yt::Video.new url: self.url
