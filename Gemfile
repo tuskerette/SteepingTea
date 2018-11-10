@@ -2,9 +2,9 @@ source 'https://rubygems.org'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.4'
+gem 'rails', '4.2.10'
 # Use postgresql as the database for Active Record
-gem 'pg'
+gem 'pg', "0.21.0"
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -30,6 +30,13 @@ gem "high_voltage"
 gem "validate_url"
 
 gem 'dotenv-rails'
+
+gem "actionpack", ">= 4.2.5.2"
+gem "actionview", ">= 4.2.7.1"
+gem "activemodel", ">= 4.2.5.1"
+gem "activerecord", ">= 4.2.7.1"
+gem "loofah", ">= 2.2.3"
+gem "rails-html-sanitizer", ">= 1.0.4"
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
