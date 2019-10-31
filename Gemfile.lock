@@ -228,7 +228,7 @@ DEPENDENCIES
   actionview (= 6.0.0)
   activemodel (= 6.0.0)
   activerecord (= 6.0.0)
-  devise
+  devise (= 4.7.1)
   dotenv-rails (= 2.7.5)
   haml
   haml-rails
