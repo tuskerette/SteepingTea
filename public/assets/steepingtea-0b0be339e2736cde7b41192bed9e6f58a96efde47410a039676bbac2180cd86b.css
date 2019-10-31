@@ -1,0 +1,116 @@
+html {
+  min-height: 100%;
+  position: relative; }
+
+body {
+  background-color: #FAEBD7;
+  margin-bottom: 60px; }
+
+p {
+  font-size: 1.2em; }
+
+.nav.navbar-nav a,
+.nav.navbar-nav a:hover,
+.nav.navbar-nav a:visited {
+  color: #B0E0E6;
+  text-decoration: none; }
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: 'Raleway', sans-serif; }
+
+label,
+input {
+  font-size: 1.2em;
+  margin: 10px 0; }
+
+input[type='submit'] {
+  color: #6495ED; }
+
+input#song_url {
+  width: 300px; }
+
+label[for=song_url],
+label[for=song_comment] {
+  margin-right: 40px; }
+
+button,
+.btn,
+.btn-default {
+  color: #6495ED;
+  font-size: 1.2em; }
+  button a,
+  button a:hover,
+  button a:visited,
+  .btn a,
+  .btn a:hover,
+  .btn a:visited,
+  .btn-default a,
+  .btn-default a:hover,
+  .btn-default a:visited {
+    color: #6495ED;
+    text-decoration: none; }
+
+.navbar.navbar-default {
+  background-color: #B0E0E6;
+  border: 0;
+  height: 90px; }
+
+.navbar-default li > a,
+.navbar-right li > a,
+.navbar-nav li > a {
+  color: #6495ED !important;
+  font-size: 1.2em;
+  margin-top: 20px; }
+
+.back-to-all-songs {
+  margin-top: 20px; }
+
+.notice {
+  background-color: #F08080;
+  color: #2F4F4F;
+  font-size: 1.2em;
+  padding: 20px;
+  border-radius: 10px; }
+
+.add-song {
+  padding: 20px; }
+
+.songs {
+  padding-top: 20px; }
+
+.footer {
+  background-color: #B0E0E6;
+  bottom: 0;
+  height: 50px;
+  padding-top: 15px;
+  position: absolute;
+  text-align: center;
+  width: 100%; }
+
+.actions {
+  padding: 20px 0; }
+
+.welcome {
+  padding: 20px;
+  text-align: center; }
+
+.home-center {
+  background-color: #F08080;
+  padding: 60px;
+  text-align: center; }
+
+.required {
+  margin: 20px 0; }
+
+.field_with_errors {
+  color: #FF6347;
+  display: inline; }
+
+.sign-up {
+  background-color: #F08080;
+  padding: 0 30px 60px;
+  text-align: center; }
