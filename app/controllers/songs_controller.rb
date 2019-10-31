@@ -1,5 +1,5 @@
 class SongsController < ApplicationController
-  before_filter :authenticate_user!, except: [:index]
+  before_action :authenticate_user!, except: [:index]
   before_action :find_song, only: [:show, :edit, :update, :destroy]
   before_action :set_user
 
