@@ -216,7 +216,7 @@ GEM
     websocket-driver (0.7.1)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.4)
-    yt (0.25.40)
+    yt (0.32.4)
       activesupport
     zeitwerk (2.2.0)
 
@@ -249,7 +249,7 @@ DEPENDENCIES
   validate_url
   web-console (= 2.3.0)
   webpacker
-  yt (~> 0.25.6)
+  yt (~> 0.32.0)
 
 RUBY VERSION
    ruby 2.5.0p0

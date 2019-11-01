@@ -46,6 +46,7 @@ class SongsController < ApplicationController
     if @song.save
       redirect_to action: :index
     else
+      flash[:error] = "Could not save"
       render :new
     end
   end

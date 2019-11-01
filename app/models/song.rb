@@ -9,9 +9,13 @@ class Song < ActiveRecord::Base
   scope :black_tea, -> { where("duration > ? and duration < ?", 181, 300) }
   scope :herbal_tea, -> { where("duration > ?", 301) }
 
+  def video_id
+    url.split("=").last
+  end
+
   def set_duration
-    video = Yt::Video.new url: self.url
-    self.duration = video.duration
+    v = Yt::Video.new(id: video_id)
+    self.duration = v.duration
   end
 
 end

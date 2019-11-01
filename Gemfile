@@ -10,7 +10,7 @@ gem "turbolinks"
 gem "jbuilder", "~> 2.0"
 gem "devise", "4.7.1"
 gem "sdoc", "~> 0.4.0", group: :doc
-gem "yt", "~> 0.25.6"
+gem 'yt', '~> 0.32.0'
 gem "haml"
 
 gem "webpacker"
