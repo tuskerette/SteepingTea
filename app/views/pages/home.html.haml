@@ -20,7 +20,8 @@
         %br
         GREAT, isn't it?
     .col-md-12.sign-up
-      =link_to "Sign up", new_user_registration_path, class: 'btn btn-default'
+      = link_to "Sign up", new_user_registration_path, class: "btn btn-default"
       or
-      =link_to "Login", new_user_session_path, class: 'btn btn-default'
-
+      = link_to "Login", new_user_session_path, class: "btn btn-default"
+    .col.md-12
+      = react_component("HelloWorld", { greeting: "Hello-rails." }, { prerender: true })
