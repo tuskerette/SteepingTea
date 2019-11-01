@@ -1,5 +1,4 @@
 // Colors
-$corn-flower-blue: #6495ED;
 $powder-blue: #B0E0E6;
 $dark-slate-gray: #2F4F4F;
 $antique-white: #FAEBD7;
@@ -13,11 +12,7 @@ html {
 
 body {
   background-color: $antique-white;
-  margin-bottom: 60px;
-}
-
-p {
-  font-size: 1.2em;
+  margin-bottom: 1.5em;
 }
 
 .nav.navbar-nav {
@@ -39,12 +34,8 @@ h5 {
 
 label,
 input {
-  font-size: 1.2em;
+  font-size: 1em;
   margin: 10px 0;
-}
-
-input[type='submit'] {
-  color: $corn-flower-blue;
 }
 
 input#song_url {
@@ -59,12 +50,10 @@ label[for=song_comment] {
 button,
 .btn,
 .btn-default {
-  color: $corn-flower-blue;
-  font-size: 1.2em;
+  font-size: 1em;
   a,
   a:hover,
   a:visited {
-    color: $corn-flower-blue;
     text-decoration: none;
   }
 }
@@ -79,9 +68,8 @@ button,
 .navbar-right,
 .navbar-nav {
   li > a {
-    color: $corn-flower-blue !important;
-    font-size: 1.2em;
-    margin-top: 20px;
+    font-size: .8em;
+    margin-top: 1em;
   }
 }
 
@@ -109,24 +97,24 @@ button,
   background-color: $powder-blue;
   bottom: 0;
   height: 50px;
-  padding-top: 15px;
+  padding-top: 1em;
   position: absolute;
   text-align: center;
   width: 100%;
 }
 
 .actions {
-  padding: 20px 0;
+  padding: 1em 0;
 }
 
 .welcome {
-  padding: 20px;
+  padding: 1em;
   text-align: center;
 }
 
 .home-center {
   background-color: $light-coral;
-  padding: 60px;
+  padding: 1em;
   text-align: center;
 }
 

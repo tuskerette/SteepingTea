@@ -5,6 +5,7 @@
   .row
     .col-md-12.home-center
       %h2 About Steeping Tea
+      %h4= react_component("HelloWorld", { greeting: "Hi! This is Rails 6! And React! YAY" }, { prerender: true })
       %p
         This app is for you, if like me, forget your teabag steeping in
         %br
@@ -23,5 +24,3 @@
       = link_to "Sign up", new_user_registration_path, class: "btn btn-default"
       or
       = link_to "Login", new_user_session_path, class: "btn btn-default"
-    .col.md-12
-      = react_component("HelloWorld", { greeting: "Hello-rails." }, { prerender: true })
