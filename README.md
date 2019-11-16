@@ -3,8 +3,8 @@
 ### Live app
 https://steepingtea.herokuapp.com/
 
-This is a Rails app.
-Views: Haml.
+This is a Rails 6 app.
+Views: React (WIP)
 User authentication: Devise.
 
 
