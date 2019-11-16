@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-ruby "2.5.0"
+ruby "2.6.0"
 gem "rails", "6.0.0"
 gem "pg", "0.21.0"
 gem "sassc"
