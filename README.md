@@ -1,7 +1,7 @@
 # Steeping Tea
 
 ### Live app
-https://steepingtea.herokuapp.com/
+https://steepingtea.herokuapp.com/ (WIP, I have to fix adding React on Heroku via Webpacker)
 
 This is a Rails 6 app.
 Views: React (WIP)
