@@ -12,6 +12,7 @@
 !/log/.keep
 /tmp
 
+# Ignore webpacker & yarn
 /public/packs
 /public/packs-test
 /node_modules
