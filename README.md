@@ -1,7 +1,8 @@
-# Steeping Tea
+# Steeping Tea (Original version - now offline)
 
 ### Live app
-https://steepingtea.herokuapp.com/ (WIP, I have to fix adding React on Heroku via Webpacker)
+No longer relevant. Kept for historical purposes. Was replaced by stteping-tea-2: 
+WIP, I have to fix adding React on Heroku via Webpacker
 
 User authentication: Devise.
 
